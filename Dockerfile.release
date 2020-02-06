@@ -1,0 +1,24 @@
+FROM amazonlinux:latest
+
+LABEL maintainer="flavio.espinoza@gmail.com"
+
+COPY ./pingfederate-10.0.0.zip  ./
+COPY ./jdk-11.0.6_linux-x64_bin.rpm ./
+
+RUN yum install -y unzip wget 
+
+RUN yum install -y jdk-11.0.6_linux-x64_bin.rpm 
+
+RUN unzip pingfederate-10.0.0.zip
+
+# cleanup installation files
+RUN rm pingfederate-10.0.0.zip && rm jdk-11.0.6_linux-x64_bin.rpm
+
+ENV JAVA_HOME /usr/java/latest/
+
+EXPOSE 9999
+EXPOSE 9031
+
+COPY startup.sh /usr/bin/startup.sh
+RUN chmod +x /usr/bin/startup.sh
+ENTRYPOINT ["/usr/bin/startup.sh"] 
