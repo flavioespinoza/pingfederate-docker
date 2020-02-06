@@ -1,4 +1,4 @@
-IMG_NAME   := flavioespinoza/ping
+IMG_NAME   := flavioespinoza/pingfederate-docker
 BRANCH    := $(shell git rev-parse --abbrev-ref HEAD)
 TAG := demo-${BRANCH}
 IMG    := ${IMG_NAME}:${TAG}
