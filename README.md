@@ -1,7 +1,28 @@
 # PingFederate Docker
 > Quick and easy way to standup a PingFederate server using Docker 
 
-## Setup
+## Quick Start
+
+1. Run From Docker Image associated with this repo:
+    ```bash
+    docker run -dt --name dev_pingfederate -p 9999:9999 -p 9031:9031 flavioespinoza/pingfederate-docker bash
+    ```
+1. Verify a container named `dev_pingfederate` is up and running:'
+    ```bash
+    docker ps -a
+    ```
+
+    ```bash
+    CONTAINER ID        NETWORKS            STATUS              NAMES               PORTS
+    bd2d1471591f        bridge              Up 51 seconds       dev_pingfederate    0.0.0.0:9031->9031/tcp, 0.0.0.0:9999->9999/tcp
+    ```
+
+1. Go to: https://localhost:9999/pingfederate/app and follow the prompts:
+    <img src="./docs/assets/img/ping-admin.png" width="50%" />
+
+
+
+## Setup Your Own Docker Image
 
 1. Install npm packages with yarn
     ```bash
