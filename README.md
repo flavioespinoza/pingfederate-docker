@@ -49,8 +49,5 @@
     bd2d1471591f        bridge              Up 51 seconds       dev_pingfederate    0.0.0.0:9031->9031/tcp, 0.0.0.0:9999->9999/tcp
     ```
 
-
-
-
-1. Go to: http://localhost:9999/ and follow the prompts:
+1. Go to: https://localhost:9999/pingfederate/app and follow the prompts:
     <img src="./docs/assets/img/ping-admin.png" width="50%" />
