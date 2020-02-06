@@ -7,7 +7,8 @@
     "test": "test",
     "docker:build": "docker build -t flavioespinoza/pingfederate-docker -f Dockerfile.release .",
     "docker:push": "docker push flavioespinoza/pingfederate-docker:latest",
-    "docker:all": "(yarn docker:build; yarn docker:push)"
+    "docker:all": "(yarn docker:build; yarn docker:push)",
+    "ping": "docker run -dt --name dev_pingfederate -p 9999:9999 -p 9031:9031 flavioespinoza/pingfederate-docker bash"
   },
   "repository": {
     "type": "git",

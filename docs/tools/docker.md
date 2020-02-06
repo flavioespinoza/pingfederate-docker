@@ -82,7 +82,7 @@ docker run -td --name ping_simple flavioespinoza/ping
 ```
 
 ```bash
-docker run -it --name ping_simple -p 9999:9999 -p 9031:9031 flavioespinoza/ping bash
+docker run -td --name ping_simple -p 9999:9999 -p 9031:9031 flavioespinoza/ping bash
 ```
 
 **NOTE**: Use `-td` tag to keep container up and running:
